@@ -1,0 +1,114 @@
+// --- Test de Código Válido ---
+
+// Declaración de una función que suma dos enteros.
+int suma(int a, int b) {
+    int resultado_local = 0;
+    resultado_local = a + b;
+    return resultado_local;
+}
+
+// Declaración de una función que concatena un saludo.
+string saludar(string nombre) {
+    // Las variables locales en diferentes funciones pueden tener el mismo nombre.
+    string resultado_local = ""; 
+    resultado_local = "Hola " + nombre;
+    return resultado_local;
+}
+
+// Variables globales.
+int total = 0;
+string mensaje = "";
+int umbral = 15;
+
+// Llamada a función y asignación.
+total = suma(10, 5);
+
+// Uso de llamada a función en una condición.
+if (total > umbral) {
+    mensaje = saludar("Mundo");
+} else {
+    mensaje = saludar("Clase");
+}
+
+// Redeclaración válida en un ámbito diferente.
+int a = 100;
+
+
+
+// --- CÓDIGO VÁLIDO ---
+// Declaración de una función que suma dos enteros.
+int suma(int a, int b) {
+    int resultado_local = 0;
+    resultado_local = a + b;
+    return resultado_local;
+}
+
+// Declaración de una función que concatena un saludo.
+string saludar(string nombre) {
+    string resultado_local = ""; 
+    resultado_local = "Hola " + nombre;
+    return resultado_local;
+}
+
+// Variables globales.
+int total = 0;
+string mensaje = "";
+int umbral = 15;
+
+// Llamada a función y asignación.
+total = suma(10, 5);
+
+// Uso de llamada a función en una condición.
+if (total > umbral) {
+    mensaje = saludar("Mundo");
+} else {
+    mensaje = saludar("Clase");
+}
+
+// Redeclaración válida en un ámbito diferente.
+int a = 100;
+
+
+// --- ERRORES DE DECLARACIÓN Y ÁMBITO ---
+int x = 10;
+string x = "hola";                  // Error: redeclaración en el mismo ámbito
+
+int miFuncion() { return 0; }
+int miFuncion() { return 1; }        // Error: redeclaración de función
+
+if (10 > 5) {
+    int variable_local = 100;
+}
+variable_local = 50;                 // Error: variable fuera de ámbito
+
+
+// --- ERRORES DE LLAMADA A FUNCIÓN ---
+int resultado = 0;
+resultado = funcionInexistente();    // Error: función no declarada
+
+int mi_variable = 10;
+mi_variable();                       // Error: variable usada como función
+
+resultado = suma(5);                 // Error: pocos argumentos
+resultado = suma(5, 10, 15);         // Error: demasiados argumentos
+
+string saludo = "hola";
+resultado = suma(5, saludo);         // Error: tipo incorrecto de argumento
+
+
+// --- ERRORES DE TIPOS Y RETORNOS ---
+int obtenerNumero() { return 100; }
+string texto = "";
+texto = obtenerNumero();             // Error: asignación incompatible (string ← int)
+
+int miFuncion2() { return 10; }
+int y = 0;
+y = 5 + miFuncion2;                  // Error: función usada sin llamada
+
+int z = 10;
+return z;                            // Error: return fuera de función
+
+int obtenerNumero2() {
+    string saludo2 = "esto no es un numero";
+    return saludo2;                  // Error: retorno de tipo incorrecto
+}
