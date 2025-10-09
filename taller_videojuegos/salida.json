@@ -1,0 +1,24 @@
+{
+  "PlayerX": {
+    "partidas": [
+      {
+        "asesinatos": 10,
+        "muertes": 2,
+        "asistencias": 5,
+        "resultado": "Victoria",
+        "kda": 7.5
+      }
+    ]
+  },
+  "PlayerY": {
+    "partidas": [
+      {
+        "asesinatos": 5,
+        "muertes": 5,
+        "asistencias": 10,
+        "resultado": "Derrota",
+        "kda": 3.0
+      }
+    ]
+  }
+}
